@@ -124,6 +124,21 @@ projects.forEach((project) => {
 
     loadProjects();
   </script>
+  <script>
+    const scrollContent = document.querySelector('.scroll-content');
+    const scrollBar = document.querySelector('.scroll-bar');
+  
+    scrollContent.addEventListener('scroll', () => {
+      const scrollPercentage = (scrollContent.scrollTop / (scrollContent.scrollHeight - scrollContent.clientHeight)) * 100;
+      scrollBar.style.top = scrollPercentage + '%';
+    });
+  
+    scrollBar.addEventListener('click', (e) => {
+      const clickY = e.clientY - scrollBar.getBoundingClientRect().top;
+      const scrollY = (clickY / scrollBar.clientHeight) * scrollContent.scrollHeight;
+      scrollContent.scrollTop = scrollY;
+    });
+  </script>
 </body>
 </div>
 <div class="scroll-bar"></div>
