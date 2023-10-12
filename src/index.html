@@ -82,31 +82,36 @@
 
         const projectList = document.getElementById('project-list');
 
-        projects.forEach((project) => {
-          const listItem = document.createElement('li');
+        // ...
 
-          const projectContainer = document.createElement('div');
-          projectContainer.className = 'project-container';
+projects.forEach((project) => {
+  const listItem = document.createElement('li');
 
-          const projectImage = document.createElement('img');
-          projectImage.src = `project_images/${project.image}`;
-          projectImage.alt = project.title;
+  const projectContainer = document.createElement('div');
+  projectContainer.className = 'project-container';
 
-          const projectTitle = document.createElement('div');
-          projectTitle.className = 'project-title';
-          projectTitle.textContent = project.title;
+  const projectImage = document.createElement('img');
+  projectImage.src = `IMGchest/${project.image}`; // Update the path here
+  projectImage.alt = project.title;
 
-          const projectDescription = document.createElement('div');
-          projectDescription.className = 'project-description';
-          projectDescription.textContent = project.description;
+  const projectTitle = document.createElement('div');
+  projectTitle.className = 'project-title';
+  projectTitle.textContent = project.title;
 
-          projectContainer.appendChild(projectTitle);
-          projectContainer.appendChild(projectImage);
-          projectContainer.appendChild(projectDescription);
+  const projectDescription = document.createElement('div');
+  projectDescription.className = 'project-description';
+  projectDescription.textContent = project.description;
 
-          listItem.appendChild(projectContainer);
-          projectList.appendChild(listItem);
-          });
+  projectContainer.appendChild(projectTitle);
+  projectContainer.appendChild(projectImage);
+  projectContainer.appendChild(projectDescription);
+
+  listItem.appendChild(projectContainer);
+  projectList.appendChild(listItem);
+});
+
+// ...
+
       } catch (error) {
         console.error('Error loading projects:', error);
       }
