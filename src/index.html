@@ -60,41 +60,19 @@
   display: block;
 }
     /* Your existing styles here */
-    .custom-scrollbar {
-  position: relative;
-  width: 100%;
-  max-height: 80vh; /* Adjust as needed */
-  overflow: hidden;
+    ::-webkit-scrollbar {
+  width: 10px; /* Adjust the width as needed */
 }
 
-.scroll-content {
-  width: calc(100% - 10px); /* Adjust for the scroll bar width */
-  height: auto;
-  overflow-y: scroll;
+::-webkit-scrollbar-thumb {
+  background: #666; /* Dark grey color */
 }
-
-.scroll-bar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 10px; /* Adjust the width of the custom scroll bar */
-  background: #666;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.scroll-bar:hover {
-  background: #888;
-}
-
   
   </style>
 </head>
 
 <body>
-  <div class="custom-scrollbar">
-    <div class="scroll-content">
+ 
   <header class="header">
     <h1>Portfolio Website - Victor</h1>
     <p>Welcome to my portfolio showcasing some of my projects.</p>
@@ -107,9 +85,7 @@
   <footer>
     <p>&copy; 2023 Victor. All rights reserved.</p>
   </footer>
-</div>
-<div class="scroll-bar"></div>
-</div>
+
 
   <script>
     // Function to load and display projects
@@ -157,21 +133,7 @@ projects.forEach((project) => {
 
     loadProjects();
   </script>
-  <script>
-    const scrollContent = document.querySelector('.scroll-content');
-    const scrollBar = document.querySelector('.scroll-bar');
-  
-    scrollContent.addEventListener('scroll', () => {
-      const scrollPercentage = (scrollContent.scrollTop / (scrollContent.scrollHeight - scrollContent.clientHeight)) * 100;
-      scrollBar.style.top = scrollPercentage + '%';
-    });
-  
-    scrollBar.addEventListener('click', (e) => {
-      const clickY = e.clientY - scrollBar.getBoundingClientRect().top;
-      const scrollY = (clickY / scrollBar.clientHeight) * scrollContent.scrollHeight;
-      scrollContent.scrollTop = scrollY;
-    });
-  </script>
+
 </body>
 
 </html>
