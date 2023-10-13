@@ -1,13 +1,13 @@
 [
     {
-      "title": "Project 1",
+      "title": "Pizza app",
       "image": "project1.jpg",
-      "description": "Description of Project 1."
+      "description": "jeg har lavet en Application for at bestille pizza i den kan du vælge fra en liste af pizza eller lave en Custom pizza."
     },
     {
-      "title": "Project 2",
+      "title": "Check here again later",
       "image": "project2.jpeg",
-      "description": "Description of Project 2."
+      "description": "check here again later."
     }
     
   ]
