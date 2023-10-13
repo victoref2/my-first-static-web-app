@@ -50,6 +50,7 @@
   box-sizing: border-box;
 }
 
+
 .project-title {
   top: 0;
 }
@@ -95,6 +96,32 @@
 .button:hover {
   background-color: #555; /* Background color for the button on hover */
 }
+.project-preview {
+  width: 100%;
+  cursor: pointer;
+}
+
+.project-full {
+  display: none;
+}
+
+/* Add styles for a lightbox effect when the full-size image is displayed */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+}
  
   </style>
 </head>
@@ -113,8 +140,19 @@
   </header>
 
   <main>
-    <ul id="project-list"></ul>
+    <ul id="project-list">
+      <li class="project-container">
+        <div class="project-preview">
+          <img src="IMGchest/project1-small.PNG" alt="Project 1">
+        </div>
+        <div class="project-full">
+          <img src="IMGchest/project1.PNG" alt="Project 1">
+        </div>
+      
+      <!-- Repeat this structure for each project -->
+    </ul>
   </main>
+  
 
   <footer>
     <p> &copy; 2023 Victor. All rights reserved.</p>
@@ -157,6 +195,22 @@ projects.forEach((project) => {
   listItem.appendChild(projectContainer);
   projectList.appendChild(listItem);
 });
+const projectContainers = document.querySelectorAll('.project-container');
+const lightbox = document.querySelector('.lightbox');
+const lightboxImage = lightbox.querySelector('img');
+
+projectContainers.forEach((container, index) => {
+  const preview = container.querySelector('.project-preview');
+  preview.addEventListener('click', () => {
+    lightboxImage.src = `IMGchest/project${index + 1}-full.jpg`;
+    lightbox.style.display = 'flex';
+  });
+});
+
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
 
 // ...
 
