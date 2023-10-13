@@ -73,6 +73,38 @@
 ::-webkit-scrollbar-track {
   background: #666666; /* Darker color for the track */
 }
+.button-box {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #666; /* Background color for the button box */
+}
+
+.button {
+  text-decoration: none;
+  color: #fff; /* Text color for the button */
+  padding: 5px 10px;
+  border: 1px solid #fff; /* Border color for the button */
+  border-radius: 3px;
+  background-color: #333; /* Background color for the button */
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #555; /* Background color for the button on hover */
+}
+This CSS code defines the styling for the button boxes and buttons. You can adjust the colors and styles to match your website's design.
+
+Place the HTML code for the buttons at the top of your webpage, typically inside the <header> or above the <main> section.
+With this code, you'll have two buttons at the top of your webpage: one linking to your GitHub profile and another for downloading a PDF file. Make sure to customize the URLs and styles according to your preferences.
+
+
+
+
+
+
   
   </style>
 </head>
@@ -82,6 +114,12 @@
   <header class="header">
     <h1>Portfolio Website - Victor Engelbrech Frandsen</h1>
     <p>Velkomen til miy portfolio her viser jeg nogle af mine Projecter.</p>
+    <div class="button-box">
+  <a class="button" href="https://github.com/victoref2" target="_blank">GitHub</a>
+</div>
+<div class="button-box">
+  <a class="button" url="CV Victor.pdf" target="_blank">Download PDF</a>
+</div>
   </header>
 
   <main>
