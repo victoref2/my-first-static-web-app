@@ -2,13 +2,13 @@
     {
       "title": "Pizza app",
       "image": "project1.PNG",
-      "description": "jeg har lavet en Application for at bestille pizza i den kan du vælge fra en liste af pizza eller lave en Custom pizza. \n dette har lært mig om Wpf og Datalinks."
+      "description": "jeg har lavet en Application for at bestille pizza i den kan du vælge fra en liste af pizza eller lave en Custom pizza. \n \n dette har lært mig om Wpf og Datalinks."
     },
 
     {
       "title":"Lager system app",
       "image": "Project2.PNG",
-      "description": "jeg har lavet en Application for at styre et SQL database med en Readme fil og User guide. \n dette har lært mig lidt om SQL SSMS og Tabeler i SQL Database."
+      "description": "jeg har lavet en Application for at styre et SQL database med en Readme fil og User guide. \n \n dette har lært mig lidt om SQL SSMS og Tabeler i SQL Database."
     }
     
   ]
