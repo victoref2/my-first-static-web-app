@@ -3,6 +3,11 @@
       "title": "Pizza app",
       "image": "project1.PNG",
       "description": "jeg har lavet en Application for at bestille pizza i den kan du vælge fra en liste af pizza eller lave en Custom pizza."
+    },
+    {
+      "title":"Lager system app",
+      "image": "project2.PNG",
+      "description": "jeg har lavet en Application for at styre et SQL database med en Readme fil og User guide."
     }
     
   ]
